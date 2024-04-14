@@ -10,8 +10,10 @@
             TextColor="Blue"
             FontSize="28"
             HorizontalTextAlignment="Center"/>
-            
-            
+
+            <Image x:Name="img" Source="uisrael.png"
+                   HeightRequest="100"/>
+
             <Picker x:Name="pkEstudiantes" Title="Estudiantes">
                 <Picker.Items>
                     <x:String>Jose Chusin</x:String>
