@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJChusinS2.Vistas.vInicio"
+             Title="vInicio">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Aplicación Móvil Calificaciones UISRAEL"
+            TextColor="Blue"
+            FontSize="28"
+            HorizontalTextAlignment="Center"/>
+            
+            
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+                <Picker.Items>
+                    <x:String>Jose Chusin</x:String>
+                    <x:String>Juan Perez</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Parcial 1"
+               TextColor="Orange"
+               FontSize="Small"
+               HorizontalTextAlignment="Start" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Seguimiento"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0" />
+                <Entry x:Name="txtSeguimiento"
+               Placeholder="Ingrese nota de seguimiento"
+               MaxLength="3"
+               Keyboard="Numeric"
+               TextChanged="txtSeguimiento_TextChanged"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Examen"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0"         />
+                <Entry x:Name="txtExamen"
+                Placeholder="Ingrese nota de examen"
+                MaxLength="3"
+                Keyboard="Numeric"
+                TextChanged="txtExamen_TextChanged"   />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nota Parcial 1"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0"         />
+                <Entry x:Name="txtNota"
+                MaxLength="3"
+                Keyboard="Numeric"
+                IsEnabled="False"   />
+            </StackLayout>
+
+            <Label Text="Parcial 2"
+             TextColor="Orange"
+             FontSize="Small"
+             HorizontalTextAlignment="Start" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Seguimiento 2"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0" />
+                <Entry x:Name="txtSeguimiento2"
+                Placeholder="Ingrese nota de seguimiento 2"
+                MaxLength="3"
+                Keyboard="Numeric"
+                TextChanged="txtSeguimiento2_TextChanged"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Examen 2"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0"         />
+                <Entry x:Name="txtExamen2"
+                Placeholder="Ingrese nota de examen"
+                MaxLength="3"
+                Keyboard="Numeric"
+                TextChanged="txtExamen2_TextChanged"   />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nota Parcial 2"
+                TextColor="Black"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0"         />
+                <Entry x:Name="txtNota2"
+                MaxLength="3"
+                Keyboard="Numeric"
+                IsEnabled="False"   />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nota Final"
+                TextColor="Red"
+                FontSize="Medium"
+                HorizontalTextAlignment="Start"
+                VerticalOptions="Center" Margin="0,0,5,0"         />
+                <Entry x:Name="txtNotaf"
+                MaxLength="3"
+                Keyboard="Numeric"
+                IsEnabled="False"   />
+            </StackLayout>
+
+            <DatePicker x:Name="dpFecha" Date="04/14/2024"
+            Format="dd/MM/yyyy"/>
+
+            <Button x:Name="btnCalculo"
+                    Text="Calcular Nota"
+                    HorizontalOptions="StartAndExpand"
+                    Clicked="btnCalculo_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

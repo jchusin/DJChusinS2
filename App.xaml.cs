@@ -1,4 +1,6 @@
-﻿namespace DJChusinS2
+﻿using DJChusinS2.Vistas;
+
+namespace DJChusinS2
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new Vistas.vInicio();
         }
     }
 }
