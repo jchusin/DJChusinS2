@@ -2,9 +2,10 @@ namespace DJChusinS2.Vistas;
 
 public partial class vInicio : ContentPage
 {
-    public vInicio()
+    public vInicio(string usuario)
     {
         InitializeComponent();
+        lblusuario.Text = "Usuario conectado: " + usuario;
     }
 
     private void txtSeguimiento_TextChanged(object sender, TextChangedEventArgs e)

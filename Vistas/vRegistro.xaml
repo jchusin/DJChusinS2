@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DJChusinS2.Vistas.vGrid"
-             Title="vGrid">
+             x:Class="DJChusinS2.Vistas.vRegistro"
+             Title="vRegistro">
     <VerticalStackLayout>
 
         <Label 
-            Text="Aplicación Móvil Calificaciones UISRAEL"
-            TextColor="Blue"
-            FontSize="28"
-            HorizontalTextAlignment="Center"/>
+        Text="Aplicación Móvil Calificaciones UISRAEL"
+        TextColor="Blue"
+        FontSize="28"
+        HorizontalTextAlignment="Center"/>
 
         <Image x:Name="img" Source="uisrael.png"
         HeightRequest="100"/>
 
+        <Label 
+            Text="VENTANA DE REGISTRO"
+            FontSize="24"
+            HorizontalTextAlignment="Center" />
+
         <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -34,16 +38,18 @@
             <Entry x:Name="PasswordEntry" Placeholder="Ingrese la Contraseña" IsPassword="True" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
 
             <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button x:Name="btnInicio" Text="Iniciar Sesión" 
+                <Button x:Name="btnGuardar" Text="Guardar" 
                 HorizontalOptions="CenterAndExpand" FontSize="Micro"
-                Clicked="Button_Clicked" 
+                Clicked="btnGuardar_Clicked"
                 />
-                <Button x:Name="btnRegistro" Text="Registrarse" 
+                <Button x:Name="btnCancelar" Text="Cancelar" 
                 HorizontalOptions="CenterAndExpand" FontSize="Micro"
-                Clicked="btnRegistro_Clicked"
+                Clicked="btnCancelar_Clicked"
                 />
             </StackLayout>
 
+
         </Grid>
+
     </VerticalStackLayout>
 </ContentPage>

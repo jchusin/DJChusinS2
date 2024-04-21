@@ -4,14 +4,22 @@ using Microsoft.Maui.Controls.Xaml;
 namespace DJChusinS2.Vistas;
 
 public partial class vGrid : ContentPage
+  
 {
+    string usuario1;
+    string contrasena1;
     string[] users = { "Carlos", "Ana", "Jose" };
     string[] passwords = { "carlos123", "ana123", "jose123" };
     public vGrid()
 	{
 		InitializeComponent();
 	}
-
+    public vGrid(string usuario, string contrasena) { 
+    
+        InitializeComponent();
+        usuario1 = usuario;
+        contrasena1 = contrasena;
+    }
     private void Button_Clicked(object sender, EventArgs e)
     {
 
@@ -26,8 +34,9 @@ public partial class vGrid : ContentPage
             {
                 isAuthenticated = true;
                 DisplayAlert("¡Bienvenido!", $"¡Bienvenido {username}!", "OK");
+                Navigation.PushAsync(new vInicio(username));
                 break;
-                Navigation.PushAsync(new vInicio());
+                
             }
         }
 
@@ -38,4 +47,10 @@ public partial class vGrid : ContentPage
     
 
 }
+
+    private void btnRegistro_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new vRegistro());
+
+    }
 }
