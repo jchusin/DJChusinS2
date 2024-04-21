@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJChusinS2.Vistas.vGrid"
+             Title="vGrid">
+    <VerticalStackLayout>
+
+        <Label 
+            Text="Aplicación Móvil Calificaciones UISRAEL"
+            TextColor="Blue"
+            FontSize="28"
+            HorizontalTextAlignment="Center"/>
+
+        <Image x:Name="img" Source="uisrael.png"
+        HeightRequest="100"/>
+
+            <Entry x:Name="UsernameEntry" Placeholder="Usuario" />
+            <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
+            <Button Text="Iniciar Sesión" Clicked="Button_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -7,8 +7,8 @@ namespace DJChusinS2
         public App()
         {
             InitializeComponent();
-
             MainPage = new Vistas.vInicio();
+            //MainPage = new NavigationPage (new Vistas.vGrid());
         }
     }
 }
